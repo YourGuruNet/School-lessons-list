@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ranchers&display=swap"
+      rel="stylesheet"
+    />
+    <title>Lessons list</title>
+    <style>
+      :root {
+        --maincolor: yellow;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: rgba(14, 13, 13, 0.582);
+      }
+      h1 {
+        text-align: center;
+        font-family: "Ranchers", cursive;
+        letter-spacing: 0.1rem;
+        color: var(--maincolor);
+      }
+      h5 {
+        text-align: center;
+        font-family: "Ranchers", cursive;
+        letter-spacing: 0.1rem;
+        color: var(--maincolor);
+      }
+      .class-list {
+        color: rgb(0, 0, 0);
+        background-color: var(--maincolor);
+        font-size: 2rem;
+        text-decoration: none;
+        padding: 0.5rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        margin: 0.5rem;
+        display: inline-block;
+        border: 0.01rem var(--maincolor) solid;
+        border-radius: 0.3em;
+      }
+      .class-list:hover {
+        border: 0.01rem var(--maincolor) solid;
+        background-color: transparent;
+        color: var(--maincolor);
+      }
+      button:focus {
+        outline: none;
+      }
+      .number {
+        display: inline-block;
+        border: var(--maincolor) solid 0.01rem;
+        border-radius: 100%;
+        text-align: center;
+        padding: 0.5rem;
+        margin-right: 0.5rem;
+      }
+      .lesson {
+        display: block;
+        color: var(--maincolor);
+        margin-top: 1rem;
+      }
+      .page {
+        width: 100%;
+      }
+      .container {
+        display: inline-block;
+        min-width: calc(12% - 1rem - 1rem);
+        height: auto;
+        padding-left: 2rem;
+        padding-right: 1rem;
+      }
+      .Row {
+        display: table;
+        width: 100%;
+        table-layout: fixed;
+        border-spacing: 10px;
+        text-align: center;
+      }
+      ol {
+        padding: 0;
+        text-align: left;
+      }
+      @media only screen and (max-width: 1390px) {
+        .class-list {
+          font-size: 1.5rem;
+          padding: 0.3rem;
+          padding-left: 0.8rem;
+          padding-right: 0.8rem;
+          margin: 0.4rem;
+        }
+        .lesson {
+          font-size: 0.8rem;
+          margin-top: 0.8rem;
+        }
+      }
+      @media only screen and (max-width: 1070px) {
+        .class-list {
+          font-size: 1rem;
+          padding: 0.15rem;
+          padding-left: 0.5rem;
+          padding-right: 0.5rem;
+          margin: 0.5rem;
+        }
+        .lesson {
+          font-size: 0.5rem;
+          margin-top: 0.5rem;
+        }
+      }
+      @media only screen and (max-width: 858px) {
+        .container {
+        min-width: calc(25% - 1rem - 1rem);
+        padding-left: 1rem;
+        padding-right: 0.5rem;
+      }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <h1>School lessons list</h1>
+      <div class="Row">
+        <button class="class-list" id="list1" onclick="openList1()">
+          9. A class
+        </button>
+        <button class="class-list" id="list2" onclick="openList2()">
+          9. B class
+        </button>
+        <button class="class-list" id="list2" onclick="openList3()">
+          10. A class
+        </button>
+        <button class="class-list" id="list2" onclick="openList4()">
+          10. B class
+        </button>
+        <button class="class-list" id="list2" onclick="openList5()">
+          11. A class
+        </button>
+        <button class="class-list" id="list2" onclick="openList6()">
+          11. B class
+        </button>
+        <button class="class-list" id="list2" onclick="openList7()">
+          12. class
+        </button>
+      </div>
+      <div class="Row">
+        <div class="container">
+          <ol id="9a" style="display: none">
+            <h5>9. A class</h5>
+            <p class="lesson"><span class="number">1. </span>Math</p>
+            <p class="lesson"><span class="number">2. </span>sport</p>
+            <p class="lesson"><span class="number">3. </span>Geography</p>
+            <p class="lesson"><span class="number">4. </span>Chemistry</p>
+            <p class="lesson"><span class="number">5. </span>--</p>
+            <p class="lesson"><span class="number">6. </span>Economic</p>
+            <p class="lesson"><span class="number">7. </span>Biologic</p>
+            <p class="lesson"><span class="number">8. </span>Visual design</p>
+          </ol>
+        </div>
+        <div class="container">
+          <ol id="9b" style="display: none">
+            <h5>9. B class</h5>
+            <p class="lesson"><span class="number">1. </span>Math</p>
+            <p class="lesson"><span class="number">2. </span>Sport</p>
+            <p class="lesson"><span class="number">3. </span>Economic</p>
+            <p class="lesson"><span class="number">4. </span>Visual design</p>
+            <p class="lesson"><span class="number">5. </span>Biologic</p>
+            <p class="lesson"><span class="number">6. </span>Biologic</p>
+            <p class="lesson"><span class="number">7. </span>Geography</p>
+            <p class="lesson"><span class="number">8. </span>Geography</p>
+          </ol>
+        </div>
+        <div class="container">
+          <ol id="10a" style="display: none">
+            <h5>10. A class</h5>
+            <p class="lesson"><span class="number">1. </span>Geography</p>
+            <p class="lesson"><span class="number">2. </span>Geography</p>
+            <p class="lesson"><span class="number">3. </span>Math</p>
+            <p class="lesson"><span class="number">4. </span>Math</p>
+            <p class="lesson"><span class="number">5. </span>Economic</p>
+            <p class="lesson"><span class="number">6. </span>Economic</p>
+            <p class="lesson"><span class="number">7. </span>Sport</p>
+            <p class="lesson"><span class="number">8. </span>Sport</p>
+          </ol>
+        </div>
+        <div class="container">
+          <ol id="10b" style="display: none">
+            <h5>10. B class</h5>
+            <p class="lesson"><span class="number">1. </span>Sport</p>
+            <p class="lesson"><span class="number">2. </span>Sport</p>
+            <p class="lesson"><span class="number">3. </span>Math</p>
+            <p class="lesson"><span class="number">4. </span>Math</p>
+            <p class="lesson"><span class="number">5. </span>Visual design</p>
+            <p class="lesson"><span class="number">6. </span>Visual design</p>
+            <p class="lesson"><span class="number">7. </span>Biologic</p>
+            <p class="lesson"><span class="number">8. </span>Biologic</p>
+          </ol>
+        </div>
+        <div class="container">
+          <ol id="11a" style="display: none">
+            <h5>11. A class</h5>
+            <p class="lesson"><span class="number">1. </span>Biologic</p>
+            <p class="lesson"><span class="number">2. </span>Biologic</p>
+            <p class="lesson"><span class="number">3. </span>Chemistry</p>
+            <p class="lesson"><span class="number">4. </span>Chemistry</p>
+            <p class="lesson"><span class="number">5. </span>--</p>
+            <p class="lesson"><span class="number">6. </span>--</p>
+            <p class="lesson"><span class="number">7. </span>Economic</p>
+            <p class="lesson"><span class="number">8. </span>Economic</p>
+          </ol>
+        </div>
+        <div class="container">
+          <ol id="11b" style="display: none">
+            <h5>11. B class</h5>
+            <p class="lesson"><span class="number">1. </span>Economic</p>
+            <p class="lesson"><span class="number">2. </span>Economic</p>
+            <p class="lesson"><span class="number">3. </span>--</p>
+            <p class="lesson"><span class="number">4. </span>Chemistry</p>
+            <p class="lesson"><span class="number">5. </span>Chemistry</p>
+            <p class="lesson"><span class="number">6. </span>Math</p>
+            <p class="lesson"><span class="number">7. </span>Math</p>
+            <p class="lesson"><span class="number">8. </span>Biologic</p>
+          </ol>
+        </div>
+        <div class="container">
+          <ol id="12" style="display: none">
+            <h5>12 class</h5>
+            <p class="lesson"><span class="number">1. </span>Math</p>
+            <p class="lesson"><span class="number">2. </span>Sport</p>
+            <p class="lesson"><span class="number">3. </span>Math</p>
+            <p class="lesson"><span class="number">4. </span>Chemistry</p>
+            <p class="lesson"><span class="number">5. </span>Biologic</p>
+            <p class="lesson"><span class="number">6. </span>--</p>
+            <p class="lesson"><span class="number">7. </span>Economic</p>
+            <p class="lesson"><span class="number">8. </span>Economic</p>
+          </ol>
+        </div>
+      </div>
+    </div>
+    <script>
+      function openList1() {
+        var list = document.getElementById("9a");
+
+        if (list.style.display == "none") {
+          list.style.display = "block";
+        } else {
+          list.style.display = "none";
+        }
+      }
+      function openList2() {
+        var list = document.getElementById("9b");
+
+        if (list.style.display == "none") {
+          list.style.display = "block";
+        } else {
+          list.style.display = "none";
+        }
+      }
+      function openList3() {
+        var list = document.getElementById("10a");
+
+        if (list.style.display == "none") {
+          list.style.display = "block";
+        } else {
+          list.style.display = "none";
+        }
+      }
+      function openList4() {
+        var list = document.getElementById("10b");
+
+        if (list.style.display == "none") {
+          list.style.display = "block";
+        } else {
+          list.style.display = "none";
+        }
+      }
+      function openList5() {
+        var list = document.getElementById("11a");
+
+        if (list.style.display == "none") {
+          list.style.display = "block";
+        } else {
+          list.style.display = "none";
+        }
+      }
+      function openList6() {
+        var list = document.getElementById("11b");
+
+        if (list.style.display == "none") {
+          list.style.display = "block";
+        } else {
+          list.style.display = "none";
+        }
+      }
+      function openList7() {
+        var list = document.getElementById("12");
+
+        if (list.style.display == "none") {
+          list.style.display = "block";
+        } else {
+          list.style.display = "none";
+        }
+      }
+    </script>
+  </body>
+</html>
